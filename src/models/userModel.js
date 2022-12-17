@@ -5,8 +5,8 @@ const userSchema = new mongoose.Schema( {
     lastName: String,
     mobile: {
         type: String,
-        unique: true,
-        required: true
+        // unique: true,
+        // required: true
     },
     emailId: String,
     gender: {
@@ -23,9 +23,10 @@ const userSchema = new mongoose.Schema( {
     // cars: [ String  ]
 }, { timestamps: true });
 
-module.exports = mongoose.model('User', userSchema) //users
-
-
+module.exports = mongoose.model('Fser', userSchema) //users
 
 // String, Number
 // Boolean, Object/json, array
+
+
+//----------------------------------------------------------------------------------------------------------------------------------------------------------
