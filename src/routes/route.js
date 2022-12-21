@@ -1,15 +1,12 @@
 const express = require('express');
 const router = express.Router();
-const bookController= require("../controllers/bookController")
+const customercardController= require("../controllers/customercardController")
 
-router.post("/Books",bookController.books)
+router.post("/createCustomer", customercardController.createCustomer)
 
-router.post("/authors", bookController.authors)
+router.post("/createCard", customercardController.createCard)
 
-router.get("/getBooksData", bookController.getBooksData)
-router.get ("/findAuthor", bookController.findAuthor)
-router.get ("/priceOfBooks", bookController.priceOfBooks)
-// router.post("/updateBooks", BookController.updateBooks)
+
 module.exports = router;
 
 
@@ -30,6 +27,14 @@ module.exports = router;
 
 
 
+// router.post("/Books",bookController.books)
+
+// router.post("/authors", bookController.authors)
+
+// router.get("/getBooksData", bookController.getBooksData)
+// router.get ("/findAuthor", bookController.findAuthor)
+// router.get ("/priceOfBooks", bookController.priceOfBooks)
+// router.post("/updateBooks", BookController.updateBooks)
 
 
 
@@ -47,6 +52,8 @@ module.exports = router;
 
 const UserController= require("../controllers/userController");
 const { Router } = require('express');
+const cardModel = require('../models/cardModel');
+const customerModel = require('../models/customerModel');
 // const BookController= require("../controllers/bookController")
 
 // router.get("/test-me", function (req, res) {
