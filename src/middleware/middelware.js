@@ -15,9 +15,9 @@ const mid1 = async function(req,res,next){
                                                                 // ani jar kahi changes kele in header token tar he line print hote
                                                                 // ani jar url userId change kela tar run hot nahi
         if(!decode) return ({msg : "decode is not there"});
-        if(userId != decode.userId) {
-            return res.send({msg : "decode or userId is not there"})
-        }                                                //sarv barobar asel ani he use kela tar proper work hote
+        // if(userId != decode.userId) {
+        //     return res.send({msg : "decode or userId is not there"})
+        // }                                                //sarv barobar asel ani he use kela tar proper work hote
         next();                                            //if i will comment this lines ani jar me url change kela tar to work hoil
                                                             // ani jar kahi changes kele in header token ani line no 11 is not commented tar line no 12 
                                                             // print hote

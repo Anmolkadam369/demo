@@ -56,20 +56,20 @@ res.send({deltedUser : deletedUser})
 
 }
 
-const postMessage = async function (req,res){
-    const data = req.body.post;
-    const userId = req.params.userId;
-    const getData = await myUserModel.findById(userId);
-    let postInfo = getData.post;
-    postInfo.push(data);
-    const updateData= await myUserModel.findOneAndUpdate({_id : userId},{$set : {post : postInfo}}, {new : true});
-    res.send({postInfo : updateData})
+// const postMessage = async function (req,res){
+//     const data = req.body.post;
+//     const userId = req.params.userId;
+//     const getData = await myUserModel.findById(userId);
+//     let postInfo = getData.post;
+//     postInfo.push(data);
+//     const updateData= await myUserModel.findOneAndUpdate({_id : userId},{$set : {post : postInfo}}, {new : true});
+//     res.send({postInfo : updateData})
 
-}
+// }
 module.exports.createUser = createUser;
 module.exports.loginUser = loginUser;
 module.exports.getUserData = getUserData;
 module.exports.updateUser = updateUser;
 module.exports.deleteUser = deleteUser;
-module.exports.postMessage = postMessage;
+// module.exports.postMessage = postMessage;
 

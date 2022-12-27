@@ -13,11 +13,11 @@ const usersSchema = new mongoose.Schema({
         type : Boolean,
         default : false
     }, //default value is false 
-    "age" : Number,
-    "post" : {
-        type : [],
-        default : ["vinayak"]
-    }
+    "age" : Number//,
+    // "post" : {
+    //     type : [],
+    //     default : ["vinayak"]
+    // }
 }, {timestamps : true})
 
 module.exports = mongoose.model("thisUser", usersSchema);
