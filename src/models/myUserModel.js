@@ -3,8 +3,14 @@ const usersSchema = new mongoose.Schema({
     "firstName" : String,
     "lastName" : String,
     "mobile" : Number,
-    "emailId" : String,
-    "password" : String,
+    "emailId" : {
+        type : String,
+        required : true
+    },
+    "password" :{
+        type : String,
+        required : true
+    },
     "gender" : {
         type : String,
         enum : ["male","female","others"]
@@ -13,11 +19,11 @@ const usersSchema = new mongoose.Schema({
         type : Boolean,
         default : false
     }, //default value is false 
-    "age" : Number//,
-    // "post" : {
-    //     type : [],
-    //     default : ["vinayak"]
-    // }
+    "age" : Number,
+    "post" : {
+        type : [],
+        default : []
+    }
 }, {timestamps : true})
 
 module.exports = mongoose.model("thisUser", usersSchema);
